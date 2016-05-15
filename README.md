@@ -1,6 +1,6 @@
 # vagrant_drupal7_drush
 
-Vagrant Box with Drupal and Drush    |     
+Vagrant Box with Drupal and Drush   
 Mac OS X El Capitan Version: 10.11.4
 
 
