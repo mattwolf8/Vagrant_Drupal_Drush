@@ -66,13 +66,13 @@ INSTALL DRUPAL 7
 * 2. Download Drupal 7 
 * ***$ drush dl drupal-7.x --drupal-project-rename=public***
 * Prompt: /var/www/public alread exists. Overwrite it? 
-* ***$ y
+* $ y
 * 3. Navigate to public folder
 * ***$ cd public***
 * 4. Install drupal 7
 * ***$ drush si standard --db-url=mysql://root:root@localhost/drupal7***
 * You are about to create a /var/www/public/sites/default/setting.php file, do you want to continue
-* ***$ y
+* $ y
 * 5. Copy the username and password given to you
 * ***$ User name: admin***
 * ***$ Password: PE3S6yVKqQ***
