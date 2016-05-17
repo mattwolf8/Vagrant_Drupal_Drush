@@ -97,23 +97,28 @@
             <li>5. Install Composer</li>
             <li><pre><code>php ~/bin/composer.phar install</code></pre></li>
         </ul>
+        
         <h3>INSTALL DRUPAL 7</h3>
         <ul>
             <li>1. navigate to cd /var/www</li>
             <li>2. Download Drupal 7 </li>
             <li><pre><code>drush dl drupal-7.x --drupal-project-rename=public</code></pre></li>
+            <li>Prompt: /var/www/public alread exists. Overwrite it? </li>
+            <li><pre><code>y</code></pre></li>
             <li>3. navigate to public folder</li>
             <li><pre><code>cd public</code></pre></li>
-            <li>4. Install drupal 7
-                <li><pre><code>drush si standard --db-url=mysql://root:root@localhost/drupal7</code></pre></li>
-                <li>5. Copy the username and password given to you</li>
-                <li><pre><code>User name: admin</code></pre></li>
-                <li><pre><code>Password: PE3S6yVKqQ</code></pre></li>
-                <li><pre><code>(Your Password will be different)</code></pre></li>
-                <li>Visit the site and login with your new credentials</li>
-                <li><a href="http://192.168.33.10/" target="_blank">192.168.33.10/</a></li>
-                <li>If Errors:</li>
-                <li><pre><code>sudo service apache2 restart</code></pre></li>
+            <li>4. Install drupal 7</li>
+            <li><pre><code>drush si standard --db-url=mysql://root:root@localhost/drupal7</code></pre></li>
+            <li>You are about to create a /var/www/public/sites/default/setting.php file, do you want to continue</li>
+            <li><pre><code>y</code></pre></li>
+            <li>5. Copy the username and password given to you</li>
+            <li><pre><code>User name: admin</code></pre></li>
+            <li><pre><code>Password: PE3S6yVKqQ</code></pre></li>
+            <li><pre><code>(Your Password will be different)</code></pre></li>
+            <li>Visit the site and login with your new credentials</li>
+            <li><a href="http://192.168.33.10/" target="_blank">192.168.33.10/</a></li>
+            <li>If Errors:</li>
+            <li><pre><code>sudo service apache2 restart</code></pre></li>
         </ul>
         <h3>USING DRUSH</h3>
         <ul>
