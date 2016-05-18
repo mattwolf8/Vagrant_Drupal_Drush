@@ -43,32 +43,12 @@
             <li><pre><code>cd drupal_7_vagrant</code></pre></li>
             <li>3. Download scotch box</li>
             <li><pre><code>git clone https://github.com/scotch-io/scotch-box.git drupal</code></pre></li>
-            <li>4. Configure scotch box</li>
-            <li>Open the Vagrantfile in an IDE.</li>
-            <li>drupal/Vagrantfile</li>
-            <li>Replace the content with the following code:</li>
-           <li><pre><code># -*- mode: ruby -*-
-# vi: set ft=ruby :
-Vagrant.configure("2") do |config|
-    config.vm.box = "scotch/box"
-    config.vm.network "private_network", ip: "192.168.33.10"
-    config.vm.hostname = "scotchbox"
-#This is the FAST way to SYNC FOLDERS!!!!
-config.vm.synced_folder ".", "/var/www", id: "webroot", type: "rsync"
-#OLD way to do it (works well but slow)
-#config.vm.synced_folder ".", "/var/www", :mount_options => ["dmode=777", "fmode=666"]
-# Optional NFS. Make sure to remove other synced_folder line too
-#config.vm.synced_folder ".", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
-#config.vm.synced_folder "./", "/var/www", type:"nfs", mount_options:["nolock,vers=3,udp,noatime,actimeo=1"]
-end</code>
-                </pre>
-            </li>
-            <li>5. Load vagrant</li>
+            <li>4. Load vagrant</li>
             <li><pre><code>cd drupal</code></pre></li>
             <li><pre><code>vagrant up</code></pre></li>
-            <li>6. Visit the site</li>
+            <li>5. Visit the site</li>
             <li><a href="http://192.168.33.10/" target="_blank">192.168.33.10/</a></li>
-            <li>7. ssh into the newly created box</li>
+            <li>6. ssh into the newly created box</li>
             <li><pre><code>vagrant ssh</code></pre></li>
         </ul>
         <h3>ADDING A DATABASE</h3>

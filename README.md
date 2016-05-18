@@ -5,33 +5,13 @@ Mac OS X El Capitan Version: 10.11.4
 
 
 SET UP VAGRANT
-* 0. Create folder
+* 1. Create folder
 * ***$ mkdir drupal_7_vagrant***
-* 1. Open folder in terminal
+* 2. Open folder in terminal
 * ***$ cd drupal_7_vagrant***
-* 2. Download scotch box
+* 3. Download scotch box
 * ***$ git clone https://github.com/scotch-io/scotch-box.git drupal***
-* 3. Configure scotch box
-* Open the Vagrantfile in an IDE.
-* drupal/Vagrantfile</li>
-* Replace the content with the following code:
-
-        # -*- mode: ruby -*-
-        # vi: set ft=ruby :
-  
-        Vagrant.configure("2") do |config|
-        config.vm.box = "scotch/box"
-        config.vm.network "private_network", ip: "192.168.33.10"
-        config.vm.hostname = "scotchbox"
-        #This is the FAST way to SYNC FOLDERS!!!!
-        config.vm.synced_folder ".", "/var/www", id: "webroot", type: "rsync"
-        #OLD way to do it (works well but slow)
-        #config.vm.synced_folder ".", "/var/www", :mount_options => ["dmode=777", "fmode=666"]
-        # Optional NFS. Make sure to remove other synced_folder line too
-        #config.vm.synced_folder ".", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
-        #config.vm.synced_folder "./", "/var/www", type:"nfs", mount_options:["nolock,vers=3,udp,noatime,actimeo=1"]
-        end
-##### 4. Load Vagrant
+* 4. Load Vagrant
 * ***$ cd drupal***
 * ***$ vagrant up***
 * 5. Visit the site [192.168.33.10/](http://192.168.33.10/)
