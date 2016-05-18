@@ -16,10 +16,10 @@ SET UP VAGRANT
 * drupal/Vagrantfile</li>
 * Replace the content with the following code:
 
-  '''\# -*- mode: ruby -*-
-  \# vi: set ft=ruby :
+    \# -*- mode: ruby -*-
+    \# vi: set ft=ruby :
   
-  Vagrant.configure("2") do |config|
+    Vagrant.configure("2") do |config|
     config.vm.box = "scotch/box"
     config.vm.network "private_network", ip: "192.168.33.10"
     config.vm.hostname = "scotchbox"
@@ -30,7 +30,7 @@ SET UP VAGRANT
     \# Optional NFS. Make sure to remove other synced_folder line too
     \#config.vm.synced_folder ".", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
     \#config.vm.synced_folder "./", "/var/www", type:"nfs", mount_options:["nolock,vers=3,udp,noatime,actimeo=1"]
-  end'''
+    end
 
 
 * 3. Load vagrant
