@@ -31,8 +31,7 @@ SET UP VAGRANT
         #config.vm.synced_folder ".", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
         #config.vm.synced_folder "./", "/var/www", type:"nfs", mount_options:["nolock,vers=3,udp,noatime,actimeo=1"]
         end
-
-4. Load Vagrant
+##### 4. Load Vagrant
 * ***$ cd drupal***
 * ***$ vagrant up***
 * 5. Visit the site [192.168.33.10/](http://192.168.33.10/)
