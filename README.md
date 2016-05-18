@@ -16,22 +16,21 @@ SET UP VAGRANT
 * drupal/Vagrantfile</li>
 * Replace the content with the following code:
 
-    ```\# -*- mode: ruby -*-
-    \# vi: set ft=ruby :
+        \# -*- mode: ruby -*-
+        \# vi: set ft=ruby :
   
-    Vagrant.configure("2") do |config|
-    config.vm.box = "scotch/box"
-    config.vm.network "private_network", ip: "192.168.33.10"
-    config.vm.hostname = "scotchbox"
-    \#This is the FAST way to SYNC FOLDERS!!!!
-    config.vm.synced_folder ".", "/var/www", id: "webroot", type: "rsync"
-    \#OLD way to do it (works well but slow)
-    \#config.vm.synced_folder ".", "/var/www", :mount_options => ["dmode=777", "fmode=666"]
-    \# Optional NFS. Make sure to remove other synced_folder line too
-    \#config.vm.synced_folder ".", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
-    \#config.vm.synced_folder "./", "/var/www", type:"nfs", mount_options:["nolock,vers=3,udp,noatime,actimeo=1"]
-    end```
-
+        Vagrant.configure("2") do |config|
+        config.vm.box = "scotch/box"
+        config.vm.network "private_network", ip: "192.168.33.10"
+        config.vm.hostname = "scotchbox"
+        \#This is the FAST way to SYNC FOLDERS!!!!
+        config.vm.synced_folder ".", "/var/www", id: "webroot", type: "rsync"
+        \#OLD way to do it (works well but slow)
+        \#config.vm.synced_folder ".", "/var/www", :mount_options => ["dmode=777", "fmode=666"]
+        \# Optional NFS. Make sure to remove other synced_folder line too
+        \#config.vm.synced_folder ".", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
+        \#config.vm.synced_folder "./", "/var/www", type:"nfs", mount_options:["nolock,vers=3,udp,noatime,actimeo=1"]
+        end
 
 * 3. Load vagrant
 * ***$ cd drupal***
