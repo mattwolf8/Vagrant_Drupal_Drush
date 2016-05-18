@@ -11,7 +11,7 @@ SET UP VAGRANT
 * ***$ cd drupal_7_vagrant***
 * 2. Download scotch box
 * ***$ git clone https://github.com/scotch-io/scotch-box.git drupal***
-* 4. Configure scotch box
+* 3. Configure scotch box
 * Open the Vagrantfile in an IDE.
 * drupal/Vagrantfile</li>
 * Replace the content with the following code:
@@ -32,11 +32,11 @@ SET UP VAGRANT
         #config.vm.synced_folder "./", "/var/www", type:"nfs", mount_options:["nolock,vers=3,udp,noatime,actimeo=1"]
         end
 
-* 3. Load vagrant
+* 4. Load Vagrant
 * ***$ cd drupal***
 * ***$ vagrant up***
-* 4. Visit the site [192.168.33.10/](http://192.168.33.10/)
-* 5. ssh into the newly created box
+* 5. Visit the site [192.168.33.10/](http://192.168.33.10/)
+* 6. ssh into the newly created box
 * ***$ vagrant ssh***
   
 ADDING A DATABASE
